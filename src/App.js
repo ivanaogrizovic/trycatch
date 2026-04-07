@@ -1,12 +1,19 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { useState } from "react";
+import { useReview } from "./context/review.context";
 
-function App() {
+export default function App() {
+  const { reviewCode, review, loading } = useReview();
+  const [code, setCode] = useState("");
+
   return (
-    <div className="App">
-      <h1>Try catch app</h1>
+    <div>
+      <textarea onChange={(e) => setCode(e.target.value)} />
+
+      <button onClick={() => reviewCode(code)}>Review Code</button>
+
+      {loading && <p>Reviewing...</p>}
+
+      {review && <pre>{JSON.stringify(review, null, 2)}</pre>}
     </div>
   );
 }
-
-export default App;
