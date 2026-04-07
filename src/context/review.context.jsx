@@ -1,11 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-const ReviewContext = createContext({
-  review: null,
-  loading: false,
-  error: null,
-  reviewCode: async () => {},
-});
+const ReviewContext = createContext();
 
 export const ReviewProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
