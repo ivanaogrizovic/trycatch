@@ -1,6 +1,6 @@
 const { CohereClientV2 } = require("cohere-ai");
 
-const cohere = new CohereClientV2({ token: process.env.COHERE_API_KEY });
+const cohere = new CohereClientV2({ token: process.env.CO_API_KEY });
 
 export default async function handler(req, res) {
   const { code } = req.body;
