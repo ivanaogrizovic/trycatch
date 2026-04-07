@@ -1,15 +1,17 @@
 export default async function handler(req, res) {
   const { code } = req.body;
 
-  const response = await fetch("https://api.openai.com/v1/responses", {
+  const response = await fetch("https://api.cohere.ai/generate", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+      Authorization: `Bearer ${process.env.COHERE_API_KEY}`,
       "Content-Type": "application/json",
+      "Cohere-Version": "2023-12-15",
     },
     body: JSON.stringify({
-      model: "gpt-4.1-mini",
-      input: `Review this code:\n${code}`,
+      model: "command-xlarge-nightly",
+      prompt: `Review this code:\n${code}`,
+      max_tokens: 300,
     }),
   });
 

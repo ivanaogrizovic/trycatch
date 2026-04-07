@@ -1,6 +1,11 @@
 import { createContext, useContext, useState } from "react";
 
-const ReviewContext = createContext();
+const ReviewContext = createContext({
+  review: null,
+  loading: false,
+  error: null,
+  reviewCode: async () => {},
+});
 
 export const ReviewProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
@@ -21,6 +26,9 @@ export const ReviewProvider = ({ children }) => {
       });
 
       const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to fetch review");
+      }
 
       setReview(data);
     } catch (err) {
