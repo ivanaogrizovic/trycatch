@@ -8,7 +8,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await cohere.chat({
-      model: "command-r7b-12-2024",
+      model: "command-xlarge-nightly",
       messages: [
         {
           role: "user",
