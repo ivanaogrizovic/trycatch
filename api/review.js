@@ -23,15 +23,10 @@ export default async function handler(req, res) {
       temperature: 0.3,
     });
 
-    // Extract the text safely
     const reviewText =
-      response.messages
-        ?.map((msg) =>
-          msg.content
-            ?.filter((c) => c.type === "text")
-            .map((c) => c.text)
-            .join("\n"),
-        )
+      response.message?.content
+        ?.filter((c) => c.type === "text")
+        .map((c) => c.text)
         .join("\n") || "No review returned";
 
     res.status(200).json({ review: reviewText });
