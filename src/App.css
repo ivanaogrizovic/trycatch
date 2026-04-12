@@ -69,10 +69,6 @@ pre > code {
 main {
   padding: 2rem 1rem;
 }
-/* EFFECTS */
-.-glow {
-  box-shadow: var(--primary-color) 0px 0px 14px 0px;
-}
 
 ul {
   list-style-type: none;

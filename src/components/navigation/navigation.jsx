@@ -4,7 +4,7 @@ import "./navigation.css";
 
 export default function Navigation() {
   return (
-    <nav className="trycatch-navigation -glow">
+    <nav className="trycatch-navigation">
       <div className="trycatch-navigation-content">
         <Link to="/">
           <h1 className="trycatch-title">
