@@ -16,7 +16,7 @@ export default function CardsList() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <FaReact /> React
+                <FaReact aria-hidden="true" /> React
               </a>
             </li>
             <li>
@@ -25,7 +25,7 @@ export default function CardsList() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <FaAngleRight />
+                <FaAngleRight aria-hidden="true" />
                 Cohere API
               </a>
             </li>
@@ -35,7 +35,7 @@ export default function CardsList() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <IoLogoVercel /> Vercel
+                <IoLogoVercel aria-hidden="true" /> Vercel
               </a>
             </li>
           </ul>
@@ -66,7 +66,7 @@ export default function CardsList() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <FaLinkedin /> LinkedIn
+                <FaLinkedin aria-hidden="true" /> LinkedIn
               </a>
             </li>
             <li>
@@ -75,7 +75,7 @@ export default function CardsList() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <FaGithub /> GitHub
+                <FaGithub aria-hidden="true" /> GitHub
               </a>
             </li>
           </ul>

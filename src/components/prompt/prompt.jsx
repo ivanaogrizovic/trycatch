@@ -5,7 +5,7 @@ import Card from "../card/card";
 import Button from "../button/button";
 import "./prompt.css";
 
-export default function Prompt() {
+export default function Prompt({ scrollToResponse }) {
   const [code, setCode] = useState("");
   const { reviewCode } = useReview();
 
@@ -28,7 +28,10 @@ export default function Prompt() {
       <Button
         text="Review code"
         disabled={code ? false : true}
-        onClick={() => reviewCode(code)}
+        onClick={() => {
+          reviewCode(code);
+          scrollToResponse();
+        }}
       />
     </Card>
   );

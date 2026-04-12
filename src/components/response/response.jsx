@@ -1,16 +1,17 @@
 import { useReview } from "../../context/review.context";
 import ReactMarkdown from "react-markdown";
+import Loading from "../loading/loading";
 import "./response.css";
 
-export default function Response() {
-  const { review, loading, error } = useReview();
+export default function Response({ ref }) {
+  const { review, error, loading } = useReview();
 
   return (
-    <div className="trycatch-response">
-      {loading && <h2>Reviewing...</h2>}
+    <div ref={ref} className="trycatch-response">
+      {loading && <Loading />}
       {review && (
         <>
-          <h2>Ai response</h2>
+          <h2>Your code review</h2>
           <div className="trycatch-response-container">
             <ReactMarkdown>{review}</ReactMarkdown>
           </div>
