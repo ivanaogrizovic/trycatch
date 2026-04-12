@@ -16,7 +16,6 @@ export default function CardsList() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                {" "}
                 <FaReact /> React
               </a>
             </li>
@@ -31,7 +30,11 @@ export default function CardsList() {
               </a>
             </li>
             <li>
-              <a href="" rel="noopener noreferrer" target="_blank">
+              <a
+                href="https://vercel.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <IoLogoVercel /> Vercel
               </a>
             </li>
