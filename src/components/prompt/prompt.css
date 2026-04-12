@@ -21,7 +21,7 @@
 .trycatch-prompt-area:focus-visible {
   outline: none;
   cursor: text;
-  color: white;
+  color: #fff;
 }
 
 button {
