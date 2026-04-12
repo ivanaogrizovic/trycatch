@@ -1,19 +1,19 @@
-import { useState } from "react";
-import { useReview } from "./context/review.context";
+import Navigation from "./components/navigation/navigation";
+import { Routes, Route } from "react-router";
+import Home from "./routes/home";
+import About from "./routes/about";
+import "./App.css";
 
 export default function App() {
-  const { reviewCode, review, loading } = useReview();
-  const [code, setCode] = useState("");
-
   return (
-    <div>
-      <textarea onChange={(e) => setCode(e.target.value)} />
-
-      <button onClick={() => reviewCode(code)}>Review Code</button>
-
-      {loading && <p>Reviewing...</p>}
-
-      {review && <pre>{JSON.stringify(review, null, 2)}</pre>}
+    <div className="trycatch-app">
+      <Navigation />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
     </div>
   );
 }

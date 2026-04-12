@@ -1,0 +1,27 @@
+.trycatch-button {
+  text-transform: uppercase;
+  padding: 1rem;
+  font-size: 18px;
+  width: max-content;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.trycatch-button.-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  box-shadow: var(--primary-color) 0px 0px 14px 0px;
+}
+
+.trycatch-button.-primary:disabled {
+  background-color: var(--paragraph-color);
+  color: rgba(255, 255, 255, 0.395);
+  border: none;
+  box-shadow: var(--paragraph-color) 0px 0px 14px 0px;
+  cursor: not-allowed;
+}
+
+.trycatch-button.-secondary {
+  background-color: var(--primary-color);
+}

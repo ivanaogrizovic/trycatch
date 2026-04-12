@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap");
+
+:root {
+  --background-color: #020617;
+  --primary-color: #0793cf;
+  --secondary-color: #eec0ff;
+  --tertiary-color: #f684fc;
+  --paragraph-color: #9aa4b6;
+  background-color: var(--background-color);
+  color: var(--paragraph-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  animation: fadeIn 0.25s ease-in;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p,
+li,
+a,
+pre,
+code,
+textarea {
+  animation: fadeIn 0.35s ease-in;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p,
+li,
+button,
+label {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+pre,
+code {
+  color: var(--tertiary-color);
+  background-color: #64748b3b;
+  white-space: break-spaces;
+}
+
+pre > code {
+  background-color: transparent;
+}
+
+main {
+  padding: 2rem 1rem;
+}
+/* EFFECTS */
+.-glow {
+  box-shadow: var(--primary-color) 0px 0px 14px 0px;
+}
+
+ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+li {
+  margin: 1rem 0;
+}
+
+a {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--tertiary-color);
+  transition: 0.3s linear;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  color: var(--secondary-color);
 }
 
-@keyframes App-logo-spin {
+.trycatch-about {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(2px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }

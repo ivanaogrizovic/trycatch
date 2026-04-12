@@ -1,0 +1,29 @@
+.trycatch-prompt-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.trycatch-prompt-area {
+  padding-top: 1rem;
+  color: var(--paragraph-color);
+  background-color: var(--background-color);
+  cursor: text;
+  resize: none;
+  border: none;
+  height: 55dvh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--background-color);
+}
+
+.trycatch-prompt-area:focus-visible {
+  outline: none;
+  cursor: text;
+  color: white;
+}
+
+button {
+  align-self: center;
+}
