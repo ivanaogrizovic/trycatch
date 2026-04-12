@@ -6,9 +6,9 @@ export default function Loading() {
   return (
     <div className="trycatch-loading-container">
       <h2>Reviewing your code</h2>
-      <img src={loadingGif} />
+      <img alt="" src={loadingGif} />
       <p>Please sit tight. This is a free API, so it's not the fastest.</p>
-      <img className="trycatch-loading-cat" src={catGif} />
+      <img alt="" className="trycatch-loading-cat" src={catGif} />
     </div>
   );
 }
