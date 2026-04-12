@@ -1,14 +1,9 @@
-/* * {
-  border: 1px solid red;
-  box-sizing: border-box
-} */
-
 .trycatch-title {
   margin: 0.5rem;
   cursor: pointer;
 }
 
-.trycatch-navigation {
+.trycatch-navigation-content {
   display: flex;
   flex-direction: row;
   padding: 0 1rem;

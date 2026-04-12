@@ -15,7 +15,7 @@
   border: none;
   height: 55dvh;
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) var(--background-color);
+  scrollbar-color: var(--paragraph-color) transparent;
 }
 
 .trycatch-prompt-area:focus-visible {

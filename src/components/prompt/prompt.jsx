@@ -23,7 +23,7 @@ export default function Prompt({ scrollToResponse }) {
         className="trycatch-prompt-area"
         value={code}
         onChange={(e) => setCode(e.target.value)}
-        aria-label=""
+        placeholder="Paste your code here..."
       />
       <Button
         text="Review code"

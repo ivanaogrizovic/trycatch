@@ -6,8 +6,13 @@
   --secondary-color: #eec0ff;
   --tertiary-color: #f684fc;
   --paragraph-color: #9aa4b6;
-  background-color: var(--background-color);
   color: var(--paragraph-color);
+  background: #1a0e24;
+  background: radial-gradient(
+    circle,
+    rgba(26, 14, 36, 1) 0%,
+    rgba(2, 6, 23, 1) 100%
+  );
 }
 
 h1,

@@ -1,11 +1,11 @@
 import { ReactTyped } from "react-typed";
-import "./navigation.css";
 import { Link } from "react-router";
+import "./navigation.css";
 
 export default function Navigation() {
   return (
-    <nav className="-glow">
-      <div className="trycatch-navigation">
+    <nav className="trycatch-navigation -glow">
+      <div className="trycatch-navigation-content">
         <Link to="/">
           <h1 className="trycatch-title">
             <ReactTyped strings={["Try_catch"]} typeSpeed={60} />
