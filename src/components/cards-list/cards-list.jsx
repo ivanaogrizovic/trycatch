@@ -11,7 +11,11 @@ export default function CardsList() {
           <h2 className="trycatch-about-title">Tech Stack</h2>
           <ul>
             <li>
-              <a href="https://react.dev/" rel="no_referrer" target="_blank">
+              <a
+                href="https://react.dev/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 {" "}
                 <FaReact /> React
               </a>
@@ -19,7 +23,7 @@ export default function CardsList() {
             <li>
               <a
                 href="https://docs.cohere.com/reference/about"
-                rel="no_referrer"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <FaAngleRight />
@@ -27,7 +31,7 @@ export default function CardsList() {
               </a>
             </li>
             <li>
-              <a href="" rel="no_referrer" target="_blank">
+              <a href="" rel="noopener noreferrer" target="_blank">
                 <IoLogoVercel /> Vercel
               </a>
             </li>
@@ -56,7 +60,7 @@ export default function CardsList() {
             <li>
               <a
                 href="https://www.linkedin.com/in/ivana-ogrizovic/"
-                rel="no_referrer"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <FaLinkedin /> LinkedIn
@@ -65,7 +69,7 @@ export default function CardsList() {
             <li>
               <a
                 href="https://github.com/ivanaogrizovic"
-                rel="no_referrer"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <FaGithub /> GitHub
