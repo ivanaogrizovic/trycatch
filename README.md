@@ -1,70 +1,182 @@
-# Getting Started with Create React App
+[![Skills Stack Icoziv](https://i.icoziv.workers.dev/icons?i=js,html,css,react,vercel,cohere&theme=dark)](https://github.com/thuongtruong109/icoziv)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/ivanaogrizovic/trycatch">
+    <img src="./public/trycatch-image.png" alt="Logo" width="auto" height="80">
+  </a>
 
-## Available Scripts
+  <p align="center">
+    An AI powered code reviewer
+    <br />
+    <a href="https://github.com/ivanaogrizovic/trycatch"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://trycatch-topaz.vercel.app/">View Demo</a>
+  </p>
+</div>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-### `npm start`
+<!-- ABOUT THE PROJECT -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About The Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="./public/trycatch-screenshot.png">
 
-### `npm test`
+A React-based code review tool powered by the Cohere API.
+It processes user-submitted code and returns concise feedback on readability, structure, and best practices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Built to explore integrating LLMs into developer workflows.
 
-### `npm run build`
+### Built With
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- CSS
+- Vercel
+- Cohere AI
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- GETTING STARTED -->
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Follow these steps to set up the project locally and connect it to the Cohere API using Vercel.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Make sure you have the following installed:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Node.js (v18 or later)
+- npm
 
-## Learn More
+```sh
+npm install npm@latest -g
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 1. Create a Cohere API Token
 
-### Code Splitting
+- Go to the Cohere dashboard
+- Sign up or log in
+- Navigate to the API Keys section
+- Generate a new API key
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+⚠️ Keep this token secure — you’ll use it as an environment variable.
 
-### Analyzing the Bundle Size
+#### 2. Set Up a Vercel Account
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Go to Vercel and create an account
 
-### Making a Progressive Web App
+- Install the Vercel CLI (optional but recommended):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```sh
+npm install -g vercel
+```
 
-### Advanced Configuration
+- Log in via CLI:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```sh
+vercel login
+```
 
-### Deployment
+#### 3. Clone the Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```sh
+git clone https://github.com/ivanaogrizovic/trycatch.git
+cd trycatch
+```
 
-### `npm run build` fails to minify
+#### 4. Add Environment Variable in Vercel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- In your Vercel dashboard, create a new project (or import your repo)
+- Go to Project Settings → Environment Variables
+- Add your Cohere API key:
+
+```sh
+Name: COHERE_API_KEY
+Value: your_api_key_here
+```
+
+- Save and deploy your project
+
+#### 5. Install Dependencies
+
+```sh
+npm install
+```
+
+#### 6. Run the project
+
+Start both the React app and Vercel:
+
+```sh
+vercel dev
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+You can use this app to get a code review on any programming language.
+
+Please be aware that it's leveraging a <b>free LLM</b>, so the response times can be a quite long at times.But they do come through! 😊
+
+<img src="./public/trycatch-screenshot.png">
+<img src="./public/trycatch-screenshot-2.png">
+<img src="./public/trycatch-screenshot-3.png">
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## License
+
+This is a project made for fun and to explore leveraging LLMs.
+
+Don't claim it as your own.
+
+The LLM is provided by [Cohere AI](https://cohere.com/).
+
+[![SAFE-HAND MADE CODE](https://img.shields.io/badge/SAFE-HAND%20MADE%20CODE-32CD32)](https://github.com/40ants/ai-badges)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+You can find me on [LinkedIn](https://www.linkedin.com/in/ivana-ogrizovic/).
+
+Project Link: [https://github.com/ivanaogrizovic/trycatch](https://github.com/ivanaogrizovic/trycatch)
+
+Demo Link: https://trycatch-topaz.vercel.app/
+
+[![Icoziv-icons](https://i.icoziv.workers.dev/icons?i=linkedin)](https://www.linkedin.com/in/ivana-ogrizovic/)
+[![Icoziv-icons](https://i.icoziv.workers.dev/icons?i=github-dark)](https://github.com/ivanaogrizovic/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
