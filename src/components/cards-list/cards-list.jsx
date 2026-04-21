@@ -1,7 +1,6 @@
 import { FaReact, FaAngleRight, FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
 import GlareHover from "../glare-hover/GlareHover";
-import Card from "../card/card";
 import "./cards-list.css";
 
 export default function CardsList() {

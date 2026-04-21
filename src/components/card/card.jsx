@@ -1,4 +1,3 @@
-import GlareHover from "../glare-hover/GlareHover";
 import "./card.css";
 
 export default function Card({ children }) {
