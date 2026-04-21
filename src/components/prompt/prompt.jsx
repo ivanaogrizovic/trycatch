@@ -12,7 +12,7 @@ export default function Prompt({ scrollToResponse }) {
   const style = { color: "#38bdf8", fontSize: "1.5rem" };
 
   return (
-    <Card>
+    <div className="trycatch-prompt">
       <label htmlFor="codePrompt" className="trycatch-prompt-label">
         <VscCode style={style} /> Your_code
       </label>
@@ -33,6 +33,6 @@ export default function Prompt({ scrollToResponse }) {
           scrollToResponse();
         }}
       />
-    </Card>
+    </div>
   );
 }
