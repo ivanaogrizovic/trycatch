@@ -60,7 +60,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await cohere.chat({
-      model: "command-r-plus",
+      model: "command-xlarge-nightly",
       messages: [
         {
           role: "user",
