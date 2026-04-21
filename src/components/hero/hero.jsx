@@ -8,7 +8,7 @@ export default function Hero() {
         <h1 className="trycatch-hero-title">
           Welcome to your AI code reviewer
         </h1>
-        <p>Paster your code below and begin.</p>
+        <p>Paste your code below and begin.</p>
         <p>Happy coding!</p>
       </div>
       <div style={{ width: "100%", height: 600, position: "relative" }}>
