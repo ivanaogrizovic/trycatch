@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useReview } from "../../context/review.context";
 import { VscCode } from "react-icons/vsc";
-import Card from "../card/card";
 import Button from "../button/button";
 import "./prompt.css";
 
