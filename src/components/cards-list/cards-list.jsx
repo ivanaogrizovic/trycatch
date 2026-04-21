@@ -3,8 +3,6 @@ import { IoLogoVercel } from "react-icons/io5";
 import Card from "../card/card";
 import "./cards-list.css";
 
-import GlareHover from "../../component/GlareHover";
-
 export default function CardsList() {
   return (
     <div className="trycatch-cards-list">

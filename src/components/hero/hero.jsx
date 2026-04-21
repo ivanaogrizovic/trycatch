@@ -1,4 +1,4 @@
-import LiquidEther from "../../component/LiquidEther";
+import LiquidEther from "../liquid-ether/LiquidEther";
 import "./hero.css";
 
 export default function Hero() {
