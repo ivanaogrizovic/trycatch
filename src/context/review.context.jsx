@@ -14,7 +14,6 @@ export const ReviewProvider = ({ children }) => {
 
     setError(null);
 
-    // create a new review entry immediately (loading state)
     setReviews((prev) => [
       {
         id: requestId,
@@ -67,9 +66,12 @@ export const ReviewProvider = ({ children }) => {
     setError(null);
   };
 
+  const currentReview = reviews[0] || null;
+
   const value = useMemo(
     () => ({
       reviews,
+      currentReview,
       error,
       reviewCode,
       reset,

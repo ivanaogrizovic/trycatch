@@ -5,7 +5,7 @@ import Button from "../button/button";
 import "./response.css";
 
 export default function Response({ ref }) {
-  const { review, error, loading, reset } = useReview();
+  const { currentReview, error, loading, reset } = useReview();
 
   return (
     <div ref={ref} className="trycatch-response">
