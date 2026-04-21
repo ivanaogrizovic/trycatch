@@ -84,7 +84,13 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ review: reviewText });
   } catch (err) {
-    console.error("Cohere API error:", err);
+    console.error("FULL ERROR:", err);
+    console.error("STACK:", err?.stack);
+
+    return res.status(500).json({
+      error: err.message,
+      stack: err?.stack,
+    });
 
     return res.status(500).json({
       error: "Failed to generate review",
