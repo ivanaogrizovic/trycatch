@@ -3,8 +3,7 @@ import { createContext, useContext, useMemo, useRef, useState } from "react";
 const ReviewContext = createContext(null);
 
 export const ReviewProvider = ({ children }) => {
-  const [loading, setLoading] = useState(false);
-  const [review, setReview] = useState(null);
+  const [reviews, setReviews] = useState([]);
   const [error, setError] = useState(null);
 
   const currentRequest = useRef(null);
@@ -13,9 +12,19 @@ export const ReviewProvider = ({ children }) => {
     const requestId = Date.now();
     currentRequest.current = requestId;
 
-    setLoading(true);
     setError(null);
-    setReview(null);
+
+    // create a new review entry immediately (loading state)
+    setReviews((prev) => [
+      {
+        id: requestId,
+        code,
+        result: null,
+        loading: true,
+        error: null,
+      },
+      ...prev,
+    ]);
 
     try {
       const res = await fetch("/api/review", {
@@ -31,35 +40,41 @@ export const ReviewProvider = ({ children }) => {
       }
 
       if (currentRequest.current === requestId) {
-        setReview(data.review);
+        setReviews((prev) =>
+          prev.map((r) =>
+            r.id === requestId
+              ? { ...r, result: data.review, loading: false }
+              : r,
+          ),
+        );
       }
     } catch (err) {
       if (currentRequest.current === requestId) {
-        setError(err.message || "Something went wrong");
-      }
-    } finally {
-      if (currentRequest.current === requestId) {
-        setLoading(false);
+        setReviews((prev) =>
+          prev.map((r) =>
+            r.id === requestId
+              ? { ...r, error: err.message, loading: false }
+              : r,
+          ),
+        );
       }
     }
   };
 
   const reset = () => {
     currentRequest.current = null;
-    setLoading(false);
-    setReview(null);
+    setReviews([]);
     setError(null);
   };
 
   const value = useMemo(
     () => ({
-      review,
-      loading,
+      reviews,
       error,
       reviewCode,
       reset,
     }),
-    [review, loading, error],
+    [reviews, error],
   );
 
   return (

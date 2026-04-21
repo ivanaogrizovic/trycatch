@@ -1,8 +1,8 @@
 import { useReview } from "../../context/review.context";
 import ReactMarkdown from "react-markdown";
 import Loading from "../loading/loading";
-import "./response.css";
 import Button from "../button/button";
+import "./response.css";
 
 export default function Response({ ref }) {
   const { review, error, loading, reset } = useReview();
