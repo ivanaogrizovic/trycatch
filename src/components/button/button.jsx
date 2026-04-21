@@ -1,7 +1,7 @@
 import "./button.css";
 
 export default function Button({
-  text,
+  children,
   onClick,
   theme = "primary",
   disabled = "false",
@@ -12,7 +12,7 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
     >
-      {text}
+      {children}
     </button>
   );
 }

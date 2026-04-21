@@ -2,9 +2,10 @@ import { useReview } from "../../context/review.context";
 import ReactMarkdown from "react-markdown";
 import Loading from "../loading/loading";
 import "./response.css";
+import Button from "../button/button";
 
 export default function Response({ ref }) {
-  const { review, error, loading } = useReview();
+  const { review, error, loading, reset } = useReview();
 
   return (
     <div ref={ref} className="trycatch-response">
@@ -15,6 +16,7 @@ export default function Response({ ref }) {
           <div className="trycatch-response-container">
             <ReactMarkdown>{review}</ReactMarkdown>
           </div>
+          <Button onClick={reset}>Review another snippet</Button>
         </>
       )}
       {error && <h2>Sorry, an error occurred. Please try again later.</h2>}

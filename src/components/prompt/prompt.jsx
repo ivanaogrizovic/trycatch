@@ -25,13 +25,14 @@ export default function Prompt({ scrollToResponse }) {
         placeholder="Paste your code here..."
       />
       <Button
-        text="Review code"
         disabled={!code}
         onClick={() => {
           reviewCode(code);
           scrollToResponse();
         }}
-      />
+      >
+        Review Code
+      </Button>
     </div>
   );
 }
