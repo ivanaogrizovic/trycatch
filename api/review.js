@@ -8,23 +8,23 @@ const MAX_CODE_LENGTH = 20000;
 
 function buildPrompt(code) {
   return `
-You are an expert software engineer conducting a code review.
+You are an expert software engineer reviewing code.
 
-Return your response in this structure:
+Return your response in this format:
 
 ## Summary
-Brief overview of the code quality.
+Brief overview of the code.
 
-## Issues
-- List concrete problems (bugs, logic issues, bad practices)
+## Critical Issues 🔴
+- Only serious bugs or security issues
 
-## Improvements
-- Actionable suggestions to improve the code
+## Improvements 🟠
+- Important but non-breaking issues
 
-## Best Practices
-- Engineering best practices relevant to this code
+## Suggestions 🟢
+- Nice-to-have improvements and best practices
 
-Be concise and specific.
+Be specific, concise, and actionable.
 
 CODE:
 ${code}
