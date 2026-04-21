@@ -40,7 +40,7 @@ export default async function handler(req, res) {
   const ip =
     req.headers["x-forwarded-for"]?.split(",")[0] || req.socket.remoteAddress;
 
-  const allowed = await rateLimit(ip);
+  const allowed = true;
 
   if (!allowed) {
     return res.status(429).json({ error: "Too many requests" });
