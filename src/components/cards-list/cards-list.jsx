@@ -1,12 +1,20 @@
 import { FaReact, FaAngleRight, FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
+import GlareHover from "../glare-hover/GlareHover";
 import Card from "../card/card";
 import "./cards-list.css";
 
 export default function CardsList() {
   return (
     <div className="trycatch-cards-list">
-      <Card>
+      <GlareHover
+        glareColor="#ffffff43"
+        glareOpacity={0.3}
+        glareAngle={-30}
+        glareSize={300}
+        transitionDuration={1400}
+        playOnce={false}
+      >
         <div>
           <h2 className="trycatch-about-title">Tech Stack</h2>
           <ul>
@@ -40,8 +48,15 @@ export default function CardsList() {
             </li>
           </ul>
         </div>
-      </Card>
-      <Card>
+      </GlareHover>
+      <GlareHover
+        glareColor="#ffffff43"
+        glareOpacity={0.3}
+        glareAngle={-30}
+        glareSize={300}
+        transitionDuration={1400}
+        playOnce={false}
+      >
         <div>
           <h2>About the Cohere API</h2>
           <p>
@@ -54,8 +69,15 @@ export default function CardsList() {
             requests.
           </p>
         </div>
-      </Card>
-      <Card>
+      </GlareHover>
+      <GlareHover
+        glareColor="#ffffff43"
+        glareOpacity={0.3}
+        glareAngle={-30}
+        glareSize={300}
+        transitionDuration={1400}
+        playOnce={false}
+      >
         <div>
           <h2>Get in touch</h2>
           <p>You can find me on:</p>
@@ -81,7 +103,7 @@ export default function CardsList() {
           </ul>
           <p>Feel free to give feedback and/or suggestions.</p>
         </div>
-      </Card>
+      </GlareHover>
     </div>
   );
 }

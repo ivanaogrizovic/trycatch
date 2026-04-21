@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Card from "../card/card";
 import "./accordion.css";
 
 export default function Accordion({ items }) {
@@ -11,7 +12,7 @@ export default function Accordion({ items }) {
   return (
     <div className="trycatch-accordion">
       {items.map((item) => (
-        <div key={item.id} className="trycatch-card">
+        <Card key={item.id}>
           <button className="accordion-header" onClick={() => toggle(item.id)}>
             {item.title}
           </button>
@@ -19,7 +20,7 @@ export default function Accordion({ items }) {
           {openId === item.id && (
             <div className="accordion-body">{item.content}</div>
           )}
-        </div>
+        </Card>
       ))}
     </div>
   );
