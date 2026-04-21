@@ -9,7 +9,7 @@ export default function ReviewHistory() {
 
   return (
     <>
-      {reviews.length >= 1 && (
+      {reviews.length > 1 && (
         <div className="review-history">
           <h2>Your review history</h2>
 

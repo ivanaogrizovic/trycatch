@@ -63,6 +63,8 @@ export const ReviewProvider = ({ children }) => {
   const reset = () => {
     currentRequest.current = null;
     setError(null);
+
+    setReviews((prev) => prev.slice(1));
   };
 
   const currentReview = reviews[0] || null;
