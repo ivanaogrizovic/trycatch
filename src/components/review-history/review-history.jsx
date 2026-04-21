@@ -4,24 +4,20 @@ import Accordion from "../accordion/accordion";
 
 export default function ReviewHistory() {
   const { reviews } = useReview();
+  const history = reviews.slice(1);
 
   return (
     <>
-      {reviews.length > 0 && (
+      {reviews.length >= 2 && (
         <div className="review-history">
           <h2>Your review history</h2>
-          <Accordion
-            items={reviews.map((r) => ({
-              id: r.id,
-              title: r.loading
-                ? "Analyzing..."
-                : r.error
-                  ? "Error"
-                  : "Code Review",
 
-              content: r.loading ? (
-                <p>Loading...</p>
-              ) : r.error ? (
+          <Accordion
+            items={history.map((r) => ({
+              id: r.id,
+              title: r.error ? "Error" : "Code Review",
+
+              content: r.error ? (
                 <p>{r.error}</p>
               ) : (
                 <ReactMarkdown>{r.result}</ReactMarkdown>
