@@ -5,6 +5,10 @@
   grid-template-rows: 1fr 1fr 1fr;
   gap: 2rem;
 
+  & > * {
+    width: stretch;
+  }
+
   @media only screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
