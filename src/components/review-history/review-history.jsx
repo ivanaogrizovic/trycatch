@@ -4,11 +4,12 @@ import Accordion from "../accordion/accordion";
 
 export default function ReviewHistory() {
   const { reviews } = useReview();
+
   const history = reviews.slice(1);
 
   return (
     <>
-      {reviews.length >= 2 && (
+      {reviews.length >= 1 && (
         <div className="review-history">
           <h2>Your review history</h2>
 
