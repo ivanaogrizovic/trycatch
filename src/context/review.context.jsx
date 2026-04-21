@@ -76,7 +76,7 @@ export const ReviewProvider = ({ children }) => {
       reviewCode,
       reset,
     }),
-    [reviews, error],
+    [reviews, error, currentReview],
   );
 
   return (
