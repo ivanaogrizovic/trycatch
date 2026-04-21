@@ -1,10 +1,11 @@
+import { forwardRef } from "react";
 import { useReview } from "../../context/review.context";
 import ReactMarkdown from "react-markdown";
 import Loading from "../loading/loading";
 import Button from "../button/button";
 import "./response.css";
 
-export default function Response({ ref }) {
+const Response = forwardRef((props, ref) => {
   const { currentReview, reset } = useReview();
 
   return (
@@ -30,4 +31,6 @@ export default function Response({ ref }) {
       )}
     </div>
   );
-}
+});
+
+export default Response;
