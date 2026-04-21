@@ -2,11 +2,10 @@ import { forwardRef } from "react";
 import { useReview } from "../../context/review.context";
 import ReactMarkdown from "react-markdown";
 import Loading from "../loading/loading";
-import Button from "../button/button";
 import "./response.css";
 
 const Response = forwardRef((props, ref) => {
-  const { currentReview, reset } = useReview();
+  const { currentReview } = useReview();
 
   return (
     <div ref={ref} className="trycatch-response">
@@ -19,8 +18,6 @@ const Response = forwardRef((props, ref) => {
           <div className="trycatch-response-container">
             <ReactMarkdown>{currentReview.result}</ReactMarkdown>
           </div>
-
-          {/* <Button onClick={reset}>Review another snippet</Button> */}
         </>
       )}
       {currentReview?.error && (
