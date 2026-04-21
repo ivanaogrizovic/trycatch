@@ -26,7 +26,7 @@ export default function Prompt({ scrollToResponse }) {
       />
       <Button
         text="Review code"
-        disabled={code ? false : true}
+        disabled={!code}
         onClick={() => {
           reviewCode(code);
           scrollToResponse();
