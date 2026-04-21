@@ -2,7 +2,7 @@ import CardsList from "../components/cards-list/cards-list";
 
 export default function About() {
   return (
-    <div className="trycatch-about">
+    <main className="trycatch-about">
       <h2>About</h2>
       <p>Welcome to TRY_CATCH.</p>
       <p>
@@ -13,6 +13,6 @@ export default function About() {
       </p>
       <p>Built to explore integrating LLMs into developer workflows.</p>
       <CardsList />
-    </div>
+    </main>
   );
 }

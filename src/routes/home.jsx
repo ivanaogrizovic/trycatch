@@ -9,12 +9,14 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Prompt
-        scrollToResponse={() => {
-          responseRef.current?.scrollIntoView({ behavior: "smooth" });
-        }}
-      />
-      <Response ref={responseRef} />
+      <main>
+        <Prompt
+          scrollToResponse={() => {
+            responseRef.current?.scrollIntoView({ behavior: "smooth" });
+          }}
+        />
+        <Response ref={responseRef} />
+      </main>
     </>
   );
 }
