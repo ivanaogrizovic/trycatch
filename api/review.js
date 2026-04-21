@@ -1,4 +1,5 @@
 import { CohereClientV2 } from "cohere-ai";
+import { rateLimit } from "../lib/rateLimit";
 
 const cohere = new CohereClientV2({
   token: process.env.CO_API_KEY,
