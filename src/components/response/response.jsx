@@ -22,6 +22,12 @@ export default function Response({ ref }) {
           <Button onClick={reset}>Review another snippet</Button>
         </>
       )}
+      {currentReview?.error && (
+        <>
+          <h2 className="trycatch-error">{currentReview.error}</h2>
+          <p>Please try again</p>
+        </>
+      )}
     </div>
   );
 }

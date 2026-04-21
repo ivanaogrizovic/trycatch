@@ -1,4 +1,6 @@
 .trycatch-response {
+  display: flex;
+  flex-direction: column;
   color: #fff;
   max-width: 1440px;
   margin: auto;
