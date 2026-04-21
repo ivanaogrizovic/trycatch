@@ -60,13 +60,6 @@ export const ReviewProvider = ({ children }) => {
     }
   };
 
-  const reset = () => {
-    currentRequest.current = null;
-    setError(null);
-
-    setReviews((prev) => prev.slice(1));
-  };
-
   const currentReview = reviews[0] || null;
 
   const value = useMemo(
@@ -75,7 +68,6 @@ export const ReviewProvider = ({ children }) => {
       currentReview,
       error,
       reviewCode,
-      reset,
     }),
     [reviews, error, currentReview],
   );

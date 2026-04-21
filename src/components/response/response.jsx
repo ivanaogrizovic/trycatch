@@ -20,7 +20,7 @@ const Response = forwardRef((props, ref) => {
             <ReactMarkdown>{currentReview.result}</ReactMarkdown>
           </div>
 
-          <Button onClick={reset}>Review another snippet</Button>
+          {/* <Button onClick={reset}>Review another snippet</Button> */}
         </>
       )}
       {currentReview?.error && (
