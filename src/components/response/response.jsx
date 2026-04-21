@@ -10,11 +10,11 @@ export default function Response({ ref }) {
   return (
     <div ref={ref} className="trycatch-response">
       {loading && <Loading />}
-      {review && (
+      {currentReview && (
         <>
           <h2>Your code review</h2>
           <div className="trycatch-response-container">
-            <ReactMarkdown>{review}</ReactMarkdown>
+            <ReactMarkdown>{currentReview}</ReactMarkdown>
           </div>
           <Button onClick={reset}>Review another snippet</Button>
         </>
