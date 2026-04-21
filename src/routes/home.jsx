@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import Hero from "../components/hero/hero";
 import Prompt from "../components/prompt/prompt";
 import Response from "../components/response/response";
 
@@ -7,6 +8,7 @@ export default function Home() {
 
   return (
     <>
+      <Hero />
       <Prompt
         scrollToResponse={() => {
           responseRef.current?.scrollIntoView({ behavior: "smooth" });
