@@ -46,8 +46,7 @@
 
 <img src="./public/trycatch-screenshot.png">
 
-A React-based code review tool powered by the Cohere API.
-It processes user-submitted code and returns concise feedback on readability, structure, and best practices.
+A React-based real-time AI code review categorized by severity.
 
 Built to explore integrating LLMs into developer workflows.
 
@@ -57,6 +56,12 @@ Built to explore integrating LLMs into developer workflows.
 - CSS
 - Vercel
 - Cohere AI
+
+Limitations:
+
+- This is a free tier LLM API, so it takes a bit to response.
+- Code to be reviewed has a 20,000 character limit
+- A rate limit is present: 10 requests/60 seconds
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,7 +123,7 @@ cd trycatch
 - Add your Cohere API key:
 
 ```sh
-Name: COHERE_API_KEY
+Name: CO_API_KEY
 Value: your_api_key_here
 ```
 
