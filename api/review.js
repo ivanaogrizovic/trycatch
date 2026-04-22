@@ -40,7 +40,7 @@ export default async function handler(req, res) {
   const ip =
     req.headers["x-forwarded-for"]?.split(",")[0] || req.socket.remoteAddress;
 
-  const allowed = true;
+  const allowed = await rateLimit(ip);
 
   if (!allowed) {
     return res.status(429).json({ error: "Too many requests" });
@@ -90,10 +90,6 @@ export default async function handler(req, res) {
     return res.status(500).json({
       error: err.message,
       stack: err?.stack,
-    });
-
-    return res.status(500).json({
-      error: "Failed to generate review",
     });
   }
 }
