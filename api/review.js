@@ -43,7 +43,10 @@ export default async function handler(req, res) {
   const allowed = await rateLimit(ip);
 
   if (!allowed) {
-    return res.status(429).json({ error: "Too many requests" });
+    return res.status(429).json({
+      error: "Rate limit exceeded: 10 requests per 60 seconds. Try again later.",
+      retryAfter: 60,
+    });
   }
 
   const { code } = req.body || {};
