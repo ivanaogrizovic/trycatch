@@ -82,6 +82,9 @@ Make sure you have the following installed:
 npm install npm@latest -g
 ```
 
+- Vercel account (free tier)
+- Upstash account + REST URL & token
+
 ### Installation
 
 #### 1. Create a Cohere API Token
@@ -120,11 +123,15 @@ cd trycatch
 
 - In your Vercel dashboard, create a new project (or import your repo)
 - Go to Project Settings → Environment Variables
-- Add your Cohere API key:
+- Add your Cohere API key and your Redis url and key:
 
 ```sh
 Name: CO_API_KEY
-Value: your_api_key_here
+Value: your_api_key
+Name: UPSTASH_REDIS_REST_URL
+Value: your_url
+Name: UPSTASH_REDIS_REST_TOKEN
+Value: your_token
 ```
 
 - Save and deploy your project
