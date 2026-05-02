@@ -10,7 +10,7 @@ export default function Accordion({ items }) {
   };
 
   return (
-    <div className="trycatch-accordion">
+    <div className="trycatch-accordion" key={items.id}>
       {items.map((item) => (
         <Card key={item.id}>
           <button className="accordion-header" onClick={() => toggle(item.id)}>

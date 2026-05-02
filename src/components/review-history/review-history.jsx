@@ -5,7 +5,7 @@ import Accordion from "../accordion/accordion";
 export default function ReviewHistory() {
   const { reviews } = useReview();
 
-  const history = reviews.slice(1);
+  const history = reviews.slice(1).filter((r) => !r.error && r.result);
 
   return (
     <>
@@ -14,15 +14,11 @@ export default function ReviewHistory() {
           <h2>Your review history</h2>
 
           <Accordion
-            items={history.map((r) => ({
+            items={history.map((r, index) => ({
               id: r.id,
-              title: r.error ? "Error" : "Code Review",
+              title: `Code Review #${index + 1}`,
 
-              content: r.error ? (
-                <p>{r.error}</p>
-              ) : (
-                <ReactMarkdown>{r.result}</ReactMarkdown>
-              ),
+              content: <ReactMarkdown>{r.result}</ReactMarkdown>,
             }))}
           />
         </div>

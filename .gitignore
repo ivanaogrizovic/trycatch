@@ -25,3 +25,5 @@ yarn-error.log*
 .vercel
 .env*.local
 response.json
+.env
+vercel.json

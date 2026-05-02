@@ -13,7 +13,9 @@ export default function Home() {
       <main>
         <Prompt
           scrollToResponse={() => {
-            responseRef.current?.scrollIntoView({ behavior: "smooth" });
+            setTimeout(() => {
+              responseRef.current?.scrollIntoView({ behavior: "smooth" });
+            }, 0);
           }}
         />
         <Response ref={responseRef} />
