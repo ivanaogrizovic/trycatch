@@ -1,8 +1,6 @@
-// src/context/review.context.test.js
 import { renderHook, act, waitFor } from "@testing-library/react";
 import { ReviewProvider, useReview } from "./review.context";
 
-// Mock fetch
 global.fetch = jest.fn();
 
 const wrapper = ({ children }) => <ReviewProvider>{children}</ReviewProvider>;
@@ -26,7 +24,6 @@ describe("ReviewContext", () => {
         result.current.reviewCode("const x = 1;");
       });
 
-      // Check loading state
       expect(result.current.currentReview.loading).toBe(true);
 
       await waitFor(() => {
@@ -85,33 +82,25 @@ describe("ReviewContext", () => {
 
       const { result } = renderHook(() => useReview(), { wrapper });
 
-      // Start first request
       act(() => {
         result.current.reviewCode("code1");
       });
 
-      // Start second request before first completes
       act(() => {
         result.current.reviewCode("code2");
       });
 
-      // At this point, currentReview should be for code2 (most recent)
       expect(result.current.reviews).toHaveLength(2);
       expect(result.current.currentReview.code).toBe("code2");
 
-      // Resolve first request (should be ignored)
       resolve1({ review: "Review 1" });
 
       await waitFor(() => {
-        // First request should NOT update currentReview
         expect(result.current.currentReview.result).toBeNull();
       });
-
-      // Resolve second request (should be applied)
       resolve2({ review: "Review 2" });
 
       await waitFor(() => {
-        // Second request SHOULD update
         expect(result.current.currentReview.result).toBe("Review 2");
         expect(result.current.currentReview.loading).toBe(false);
       });
@@ -143,7 +132,6 @@ describe("ReviewContext", () => {
         expect(result.current.reviews).toHaveLength(2);
       });
 
-      // Current should be most recent
       expect(result.current.currentReview).toBe(result.current.reviews[0]);
     });
   });
