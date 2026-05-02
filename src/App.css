@@ -7,12 +7,18 @@
   --tertiary-color: #f684fc;
   --paragraph-color: #9aa4b6;
   color: var(--paragraph-color);
+}
+
+html,
+body {
   background: #1a0e24;
   background: radial-gradient(
     circle,
     rgba(26, 14, 36, 1) 0%,
     rgba(2, 6, 23, 1) 100%
   );
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 h1,
