@@ -1,5 +1,13 @@
 import { useState } from "react";
 import { useReview } from "../../context/review.context";
+import CodeMirror from "@uiw/react-codemirror";
+import { javascript } from "@codemirror/lang-javascript";
+import { python } from "@codemirror/lang-python";
+import { java } from "@codemirror/lang-java";
+import { sql } from "@codemirror/lang-sql";
+import { html } from "@codemirror/lang-html";
+import { css } from "@codemirror/lang-css";
+import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
 import { VscCode } from "react-icons/vsc";
 import Button from "../button/button";
 import "./prompt.css";
@@ -12,17 +20,16 @@ export default function Prompt({ scrollToResponse }) {
 
   return (
     <div className="trycatch-prompt trycatch-card">
-      <label htmlFor="codePrompt" className="trycatch-prompt-label">
+      <p className="trycatch-prompt-label">
         <VscCode style={style} /> Your_code
-      </label>
-      <textarea
-        id="codePrompt"
-        name="codePrompt"
-        autoFocus={true}
+      </p>
+      <CodeMirror
         className="trycatch-prompt-area"
         value={code}
-        onChange={(e) => setCode(e.target.value)}
-        placeholder="Paste your code here..."
+        height="200px"
+        extensions={[javascript(), python(), java(), sql(), html(), css()]}
+        onChange={(value) => setCode(value)}
+        theme={tokyoNight}
       />
       <Button
         disabled={!code}
