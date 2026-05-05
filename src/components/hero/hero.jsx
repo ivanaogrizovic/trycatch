@@ -3,7 +3,7 @@ import "./hero.css";
 
 export default function Hero() {
   return (
-    <div className="trycatch-hero">
+    <header className="trycatch-hero">
       <div className="trycatch-hero-content">
         <h1 className="trycatch-hero-title">
           Welcome to your AI code reviewer
@@ -33,6 +33,6 @@ export default function Hero() {
           color2="#B497CF"
         />
       </div>
-    </div>
+    </header>
   );
 }

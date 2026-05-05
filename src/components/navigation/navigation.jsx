@@ -7,9 +7,9 @@ export default function Navigation() {
     <nav className="trycatch-navigation">
       <div className="trycatch-navigation-content">
         <Link to="/">
-          <h1 className="trycatch-title">
+          <h2 className="trycatch-title">
             <ReactTyped strings={["Try_catch"]} typeSpeed={60} />
-          </h1>
+          </h2>
         </Link>
         <Link to="/about">
           <h2>About</h2>
