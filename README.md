@@ -49,6 +49,7 @@
 A React-based real-time AI code review categorized by severity.
 
 Built to explore integrating LLMs into developer workflows.
+It also experiments with modern UI component libraries to improve responsiveness and visual feedback during AI-generated review states.
 
 ### Built With
 
@@ -56,6 +57,7 @@ Built to explore integrating LLMs into developer workflows.
 - CSS
 - Vercel
 - Cohere AI
+- React Bits (UI components and interaction enhancements)
 
 Limitations:
 
