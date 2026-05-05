@@ -103,6 +103,11 @@ a:hover {
   margin: 0 auto;
 }
 
+.trycatch-about-ul {
+  list-style: disc;
+  padding-inline-start: 40px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

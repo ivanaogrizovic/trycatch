@@ -1,5 +1,7 @@
-import { FaReact, FaAngleRight, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaReact, FaAngleRight } from "react-icons/fa";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { IoLogoVercel } from "react-icons/io5";
+import { SiRedis } from "react-icons/si";
 import GlareHover from "../glare-hover/GlareHover";
 import "./cards-list.css";
 
@@ -45,6 +47,24 @@ export default function CardsList() {
                 <IoLogoVercel aria-hidden="true" /> Vercel
               </a>
             </li>
+            <li>
+              <a
+                href="https://upstash.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <SiRedis aria-hidden="true" /> Upstash Redis
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://reactbits.dev/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FaReact aria-hidden="true" /> React Bits
+              </a>
+            </li>
           </ul>
         </div>
       </GlareHover>
@@ -59,13 +79,13 @@ export default function CardsList() {
         <div>
           <h2>About the Cohere API</h2>
           <p>
-            The Cohere platform allows you to leverage the power of large
-            language models (LLMs) with just a few lines of code and an API key.
+            The Cohere platform provides access to large language models through
+            a simple API interface, enabling natural language processing tasks
+            with minimal setup.
           </p>
           <p>
-            <strong>Please note</strong> that this app uses a free API, hence
-            the request might be limited/timed depending on the amount of
-            requests.
+            This application uses Cohere’s chat model with a structured prompt
+            to ensure consistent, developer-focused code review output.
           </p>
         </div>
       </GlareHover>
@@ -87,7 +107,7 @@ export default function CardsList() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <FaLinkedin aria-hidden="true" /> LinkedIn
+                <FiLinkedin aria-hidden="true" /> LinkedIn
               </a>
             </li>
             <li>
@@ -96,7 +116,7 @@ export default function CardsList() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <FaGithub aria-hidden="true" /> GitHub
+                <FiGithub aria-hidden="true" /> GitHub
               </a>
             </li>
           </ul>
