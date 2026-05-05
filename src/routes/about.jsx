@@ -3,7 +3,7 @@ import CardsList from "../components/cards-list/cards-list";
 export default function About() {
   return (
     <main className="trycatch-about">
-      <h1>About this project</h1>
+      <h1>Project Overview</h1>
       <p>Welcome to TRY_CATCH.</p>
       <p>
         A React-based code review tool powered by the Cohere API.
