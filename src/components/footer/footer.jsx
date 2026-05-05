@@ -1,4 +1,4 @@
-import { FiGithub, FiExternalLink, FiMail, FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { Link } from "react-router";
 import "./footer.css";
 

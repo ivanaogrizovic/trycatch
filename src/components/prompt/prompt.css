@@ -38,3 +38,7 @@ textarea.trycatch-prompt-area {
 button {
   align-self: center;
 }
+
+.cm-editor {
+  height: 70dvh;
+}
